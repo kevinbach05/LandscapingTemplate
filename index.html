@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>LT Lawn Care</title>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="styles.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@48,400,0,0">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css">
+        <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+        <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+        <script src="script.js" defer></script>
+       
+        <title>LT Lawn Care</title>
+    </head>
+
+    <body>
+
+        <!--------------------------------------------- Header --------------------------------------------->
+
+        <header id="header">
+            <div class="logo">LT Lawn Care</div>
+            <input type="checkbox" id="nav_check" hidden>
+            <nav>
+                <ul>
+                    <li><a href="#header" class="active">Home</a></li>
+                    <li><a href="#Services">Services</a></li>
+                    <li><a href="#About Us">About Us</a></li>
+                    <li><a href="#Photo Gallery">Photo Gallery</a></li>
+                    <li><a href="#Contact Us">Contact Us</a></li>
+                </ul>
+            </nav>
+            
+            <label for="nav_check" class="hamburger">
+                <div></div>
+                <div></div>
+                <div></div>
+            </label>
+        </header>
+
+        <div class="hero-image">
+            <img src="Website_Images/Banner.jpg" alt="Lawn Care Banner"> 
+            <div class="text-overlay">
+              <h2>100% Service Guarantee</h2>
+              <p>We Pride ourselves on our ability to make your lawn look its best. Our level of commitment has no limit!</p>
+              <h2>Scroll down to see how</h2>
+            </div>
+          </div>
+
+        <!--------------------------------------------- Greeting --------------------------------------------->
+
+        <section class="greet reveal">
+            <div class="textrow">
+                <div class="imgWrapper">
+                    <img src="Website_Images/house1.jpg">
+                </div>
+                <div class="contentWrapper">
+                    <div class="content">
+                        <h4>RESIDENTIAL & COMMERCIAL LAWN SERVICE</h4>
+                        <br>
+                        <h2>Professional lawn care that makes a great first impression</h2>
+                        <br>
+                        <p>We are committed to enhancing our clients’ most important investment by exceeding their lawn service needs with reliability and value. Imagine quality family time, rest and relaxation, and leaving the dirty work up to us. Your home & business is just as important as ours. Like any other turf, the lawn around your house or business requires attention and service. Our flexibility and ability to customize a lawn care program for your property allows you to make a great first impression.</p>
+                        <br>
+                        <h4>Learn more</h4>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!--------------------------------------------- Service --------------------------------------------->
+
+        <section class="services" id="Services">
+            <h1>Services We Offer</h1>
+        
+            <div class="cards">
+            <div class="card card1 reveal">
+                <div class="container">
+                    <img src="Website_Images/leaf.jpg" alt="leaf">
+                </div>
+                <div class="details">
+                    <h3>Leaf Removal</h3>
+                    <p>Enjoy a tidy yard with our efficient Leaf Removal service. Our team swiftly clears away leaves and debris, ensuring your outdoor space is neat and presentable in any season.</p>
+                </div>
+            </div>
+    
+            <div class="card card2 reveal">
+                <div class="container ">
+                    <img src="Website_Images/lawn.jpg" alt="trimming">
+                </div>
+                <div class="details">
+                    <h3>Lawn Care</h3>
+                    <p>Our expert Lawn Care keeps your grass healthy and lush. Regular mowing, edging, and fertilization tailored to your lawn's specific needs for a perfect green space.</p>
+                </div>
+            </div>
+    
+            <div class="card card3 reveal">
+                <div class="container">
+                    <img src="Website_Images/landscaping.jpg" alt="Landscraping">
+                </div>
+                <div class="details">
+                    <h3>Landscaping</h3>
+                    <p>Elevate your outdoor area with our bespoke Landscaping services. We design, plant, and maintain beautiful garden spaces that enhance your home's natural charm.</p>
+                </div>
+            </div>
+            <div class="card card4 reveal">
+                <div class="container">
+                    <img src="Website_Images/sod1.jpg" alt="leaf">
+                </div>
+                <div class="details">
+                    <h3>Soil Laying</h3>
+                    <p>Our Soil Laying service provides nutrient-rich foundations for gardens. Expert soil preparation supports plant growth for a vibrant, healthy garden.</p>
+                </div>
+            </div>
+    
+            <div class="card card5 reveal">
+                <div class="container ">
+                    <img src="Website_Images/cleaning.jpg" alt="trimming">
+                </div>
+                <div class="details">
+                    <h3>Pressure Washing</h3>
+                    <p>Revitalize your property with our Pressure Washing service. We remove dirt and stains from outdoor surfaces, improving appearance and longevity.</p>
+                </div>
+            </div>
+    
+            <div class="card card6 reveal">
+                <div class="container">
+                    <img src="Website_Images/windows.jpg" alt="Landscraping">
+                </div>
+                <div class="details">
+                    <h3>Window cleaning</h3>
+                    <p>Brighten your home with our professional Window Cleaning service. Streak-free results and meticulous cleaning give you a clearer, more beautiful view.</p>
+                </div>
+            </div>
+        </div> 
+            <script type="text/JavaScript">
+                window.addEventListener('scroll', reveal);
+    
+                function reveal() {
+                    var reveals = document.querySelectorAll('.reveal');
+    
+                for(var i = 0; i < reveals.length; i++) {
+                    var windowheight = window.innerHeight;  
+                    var revealtop = reveals[i].getBoundingClientRect().top;
+                    var revealpoint = 150;
+    
+                    if(revealtop < windowheight - revealpoint) {
+                        reveals[i].classList.add('active');  
+                    } 
+                    else {
+                        reveals[i].classList.remove('active');
+                    }   
+                }
+            }
+            </script>
+        </section>
+
+        <!--------------------------------------------- About Us --------------------------------------------->
+
+        <section class="about" id="About Us">
+            <h1>About Us</h1>
+            
+            <div class="aboutus">
+                <div class="aboutimgWrapper">
+                    <img src="Website_Images/house5.jpg">
+                </div>
+                <div class="aboutcontentWrapper">
+                    <div class="content">
+                        <h2>Locally Owned and Family Operated</h2>
+                        <br>
+                        <p> Summertime in Ontario is a time to be outside and enjoy all that nature has to offer.       Lt Lawn Care works hard to make that experience come to life. Many of our competitors focus on generating higher revenue, resulting in unnecessary applications and lower levels of customer service. For this reason, LT Lawn Care offers a customer friendly experience, which provides results far exceeding expectations. No matter what your lawn service needs may be, LT Lawn Care have the solution.</p>
+                        <br>
+                        <h2>Thank You to Our Customers</h2>
+                        <br>
+                        <p> We would like to take a moment and thank you for your business. You chose us, among many as your lawn service and snow removal provider. We strive to exceed your expectations in every way! You are truly valued, and it is always a pleasure to serve you. It’s people such as yourself to whom we owe the success of this business. Our sincere appreciation of your patronage cannot be overstated. We want to assure you that we will continue to do all we can to further exceed your expectations, and we hope you’ll continue to think of us for all your lawn and snow related needs.</p>
+                        <br>
+                        <h4>Sincerely,</h4>
+                        <br>
+                        <h4>Sebastian Lela & Joseph Tudur</h4>
+                        <h4>LT Lawn Care</h4>  
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!--------------------------------------------- Photo Gallery ----------------------------------------->
+
+        <section class="photogallery" id="Photo Gallery">
+            <h1>Photo Gallery</h1>
+
+            <div class="photobody">
+                <div class="photoContainer">
+                    <div class="slider-wrapper">
+                        <button id="prev-slide" class="slide-button material-symbols-rounded">chevron_left</button>
+                        <div class="image-list">
+                            <img src="Website_Images/house2.jpg" class="image-item">
+                            <img src="Website_Images/House3.jpg" class="image-item">
+                            <img src="Website_Images/Landscaping4.jpg" class="image-item">
+                            <img src="Website_Images/house5.jpg" class="image-item">
+                            <img src="Website_Images/landscaping.jpg" class="image-item">
+                            <img src="Website_Images/mulch.jpg" class="image-item">
+                            <img src="Website_Images/lawn.jpg" class="image-item">
+                            <img src="Website_Images/house7.jpg" class="image-item">
+                            <img src="Website_Images/house8.jpg" class="image-item">
+                            <img src="Website_Images/lawn2.jpg" class="image-item">
+                        </div>
+                        <button id="next-slide" class="slide-button material-symbols-rounded">chevron_right</button>
+                    </div>
+                    <div class="slider-scrollbar">
+                        <div class="scrollbar-track">
+                            <div class="scrollbar-thumb"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+        </section>
+
+        <!--------------------------------------------- Contact Us ----------------------------------------->
+
+        <section id="Contact Us">
+            <div class="color">
+                <div class="contactUs">
+                    <h1>Contact Us</h1>
+                    <div class="box">
+        
+                        <!-- Contact Box -->
+                        <div class="contact form">
+                            <h3>Send a Message</h3>
+                            <form action="/send-email" method="POST">
+                                <div class="formBox">
+                                    <div class="row50">
+                                        <div class="inputBox">
+                                            <span>First Name</span>
+                                            <input type="text" name="firstName" placeholder="John" required>
+                                        </div>
+                                        <div class="inputBox">
+                                            <span>Last Name</span>
+                                            <input type="text" name="lastName" placeholder="Doe" required>
+                                        </div>
+                                    </div>
+        
+                                    <div class="row50">
+                                        <div class="inputBox">
+                                            <span>Email</span>
+                                            <input type="email" name="email" placeholder="johndoe@gmail.com" required>
+                                        </div>
+                                        <div class="inputBox">
+                                            <span>Mobile</span>
+                                            <input type="text" name="mobile" placeholder="+1 519 123 8219">
+                                        </div>
+                                    </div>
+        
+                                    <div class="row100">
+                                        <div class="inputBox">
+                                            <span>Message</span>
+                                            <textarea name="message" placeholder="Write your message here" required></textarea>
+                                        </div>
+                                    </div>
+        
+                                    <div class="row100">
+                                        <div class="inputBox">
+                                            <input type="submit" value="Send">
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+        
+                        <!-- Info Box -->
+                        <div class="contact info">
+                            <h3>Contact Info</h3>
+                            <div class="infoBox">
+                                <div>
+                                    <span><ion-icon name="location"></ion-icon></span>
+                                    <p>Kitchener, Ontario <br> Canada</p>
+                                </div>
+                                <div>
+                                    <span><ion-icon name="mail"></ion-icon></span>
+                                    <a href="mailto:LTLawnnCare@gmail.com">LTLawnnCare@gmail.com</a>
+                                </div>
+                                <div>
+                                    <span><ion-icon name="call"></ion-icon></span>
+                                    <a href="tel:+15191238219">+1 519 123 8219</a>
+                                </div>
+                            </div>
+        
+                            <!-- Social media links -->
+                            <ul class="sci">
+                                <li><a href="#"><ion-icon name="logo-facebook"></ion-icon></a></li>
+                                <li><a href="#"><ion-icon name="logo-instagram"></ion-icon></a></li>
+                                <li><a href="#"><ion-icon name="logo-linkedin"></ion-icon></a></li>
+                            </ul>
+                        </div>
+        
+                        <!-- Info Map -->
+                        <div class="contact map">
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d92718.07427101843!2d-80.55871518140763!3d43.43052943439581!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x882bf48c03ee5105%3A0x9525f8e6df5f544b!2sKitchener%2C%20ON!5e0!3m2!1sen!2sca!4v1701385453449!5m2!1sen!2sca" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!--------------------------------------------- Footer -------------------------------------------->
+
+        <section>
+            <footer>
+                <div class="footerContainer">
+                    <div class="socialIcons">
+                        <li><a href="#"><ion-icon name="logo-facebook"></ion-icon></a></li>
+                        <li><a href="#"><ion-icon name="logo-instagram"></ion-icon></a></li>
+                        <li><a href="#"><ion-icon name="logo-linkedin"></ion-icon></a></li>
+                    </div>
+                    <div class="footerNav">
+                        <ul>
+                            <li><a href="#header">Home</a></li>
+                            <li><a href="#Services">Services</a></li>
+                            <li><a href="#About Us">About Us</a></li>
+                            <li><a href="#Photo Gallery">Gallery</a></li>
+                            <li><a href="#Contact Us">Contact Us</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="footerBottom">
+                    <p>Copyright &copy;2023; Designed by <a href="https://github.com/Mgavra1959">Markus Gavra</a></p>
+                </div>
+            </footer>
+        </section>
+    </body>
+</html>       
